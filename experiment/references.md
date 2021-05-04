@@ -1,1 +1,1 @@
-### Link your references in here
+- http://en.wikipedia.org/wiki/Compressive_strength
