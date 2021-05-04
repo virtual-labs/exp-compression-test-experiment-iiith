@@ -1,3 +1,8 @@
+#exp_container {
+    position: relative;
+    height: 1000px;
+    width: 100%;
+}
 #upa{
 position:absolute;	
 width:50px;

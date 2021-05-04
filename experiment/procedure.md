@@ -1,4 +1,6 @@
-**Observation 1:**
+**Manual**
+
+Observation 1: 
 
    - Initial length or height of specimen h =______mm.
    - Initial dia of specimen d0 =_____mm.
