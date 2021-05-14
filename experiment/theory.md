@@ -2,4 +2,3 @@
 
 Compression test is just opposite in nature to tensile test. Nature of deformation and fracture is quite different from that in tensile test. Compressive load tends to squeeze the specimen. Brittle materials are generally weak in tension but strong in compression. Hence this test is normally performed on cast iron, cement concrete etc. But ductile materials like Aluminium and mild steel which are strong in tension are also tested in compression. 
 
-<a href="docs/Exp-2-compression-test.pdf">read more</a> 

@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="css/exp2.css">
-</head>
-<body>
-		 <iframe id="exp_container" src="exp2.html"></iframe>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+		<link rel="stylesheet" href="./css/main.css">
+	</head>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
+		<div class="columns is-centered">
+			<div class="column has-text-centered mt-2">
+				<button id="restart" class="action-button">Restart</button>
+			</div>
+		</div>
+
+		<div class="columns is-centered">
+			<div class="column has-text-centered is-two-fifths">
+				<div class="hero is-small">
+					<div class="hero-body">
+						<canvas class="main" id="main"></canvas>
+					</div>
+				</div>
+			</div>
+			<div class="column has-text-centered">
+				<div class = "columns box mt-3" >
+					<div class="column">
+						<span class="tag is-primary is-light">Length :</span>
+						<span id="length">49.5 mm</span><br><br>
+						<span class="tag is-primary is-light">Area :</span>
+						<span id="area"> 2499.75 mm<sup>2</sup></span> 
+					</div>
+					<div class="column">
+						<span class="tag is-primary is-light">Stress :</span>
+						<span id = "stress">0.0 Mpa</span><br><br>
+						<span class="tag is-primary is-light">%Strain :</span>
+						<span id="strain">0.0 Mpa</span><br><br>
+						<span class="tag is-primary is-light">Deformation :</span>
+						<span id="deformation">0.0 mm</span>
+					</div>
+					<div class="column">
+						<span class="tag is-primary is-light">Load :</span>
+						<span id = "load">0.0 N</span><br><br>
+						<span class="tag is-primary is-light">Height :</span>
+						<span id = "height">50.5 mm</span> 
+					</div>
+				</div>
+				<div>
+					<div class="hero is-small">
+						<div id="chartContainer"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://unpkg.com/mathjs@9.2.0/lib/browser/math.js"></script>
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+		<script src="./js/main.js"></script>
+	</body>
 </html>
