@@ -6,4 +6,3 @@
 
  To determine the compressive strength of given sample. 
 
-<a href="docs/Exp-2-compression-test.pdf">read more</a> 
