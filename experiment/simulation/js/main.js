@@ -7,75 +7,109 @@ document.addEventListener('DOMContentLoaded', function(){
 	const strain = [0.8210101,1.0262626,1.180202,1.2828283,1.359798,1.4367677,1.4880808,1.5393939,1.6420202,1.6933333,1.7446465,1.7959596,1.8472727,1.949899,2.0525253,2.1551515,2.2577778,2.360404,2.5143434,2.6169697,2.8735354,3.2327273];
 	const load = [2000,4000,6000,8000,10000,12000,14000,16000,18000,20000,22000,24000,26000,28000,30000,32000,34000,36000,38000,40000,42000,43940];
 	const deformation = [0.4064,0.508,0.5842,0.635,0.6731,0.7112,0.7366,0.762,0.8128,0.8382,0.8636,0.889,0.9144,0.9652,1.016,1.0668,1.1176,1.1684,1.2446,1.2954,1.4224,1.6002];
-	const charts = [{xx:0.0,yy:0.0},{xx:0.8210101,yy:0.8001},{xx:1.0262626,yy:1.6002},{xx:1.180202,yy:2.4002},{xx:1.2828283,yy:3.2003},{xx:1.359798,yy:4.0004},{xx:1.436767,yy:4.8005},{xx:1.4880808,yy:5.6006},{xx:1.539393,yy:6.4006},{xx:1.6420202,yy:7.2007},{xx:1.693333,yy:8.0008},{xx:1.7446465,yy:8.8009},{xx:1.7959596,yy:9.6010},{xx:1.8472727,yy:10.4010},{xx:1.949899,yy:11.2011},{xx:2.0525253,yy:12.0012},{xx:2.1551515,yy:12.8013},{xx:2.2577778,yy:13.6014},{xx:2.360404,yy:14.4014},{xx:2.5143434,yy:15.2015},{xx:2.6169697,yy:16.0016},{xx:2.8735354,yy:16.8017},{xx:3.2327273,yy:17.5778}];
 
 
 	const restartButton = document.getElementById('restart');
 	restartButton.addEventListener('click', function() {restart();});
 
-	function setall()
+	const playButton = document.getElementById('play');
+	playButton.addEventListener('click',function(){play();});
+
+	const pauseButton = document.getElementById('pause');
+	pauseButton.addEventListener('click',function(){pause();});
+
+	function setAll()
 	{
-		top = [
-			[startx, starty],
-			[startx + width1, starty],
-			[startx + width1, starty + ht1],
-			[startx , starty + ht1],
+		upperPlate = [
+			[plateStartX, upperPlateStartY],
+			[plateStartX + plateWidth, upperPlateStartY],
+			[plateStartX + plateWidth, upperPlateStartY + plateHeight],
+			[plateStartX , upperPlateStartY + plateHeight],
 
 		];
 
-		bottom = [
-			[startx, bottom_starty],
-			[startx + width1, bottom_starty],
-			[startx + width1, bottom_starty + ht1],
-			[startx , bottom_starty + ht1],
+		bottomPlate = [
+			[plateStartX, bottomPlateStartY],
+			[plateStartX + plateWidth, bottomPlateStartY],
+			[plateStartX + plateWidth, bottomPlateStartY + plateHeight],
+			[plateStartX , bottomPlateStartY + plateHeight],
 
 		];
 
-		tube1 = [
-			[startx + tube_width, starty],
-			[startx + tube_width, starty - tube_ht1],
-			[startx + width1 - tube_width, starty - tube_ht1],
-			[startx + width1 - tube_width, starty],
+		upperRod = [
+			[plateStartX + rodWidth, upperPlateStartY],
+			[plateStartX + rodWidth, upperPlateStartY - upperRodHeight],
+			[plateStartX + plateWidth - rodWidth, upperPlateStartY - upperRodHeight],
+			[plateStartX + plateWidth - rodWidth, upperPlateStartY],
 		];
 
-		tube2 = [
-			[startx + tube_width, bottom_starty+ht1],
-			[startx + tube_width, bottom_starty +tube_ht2 + ht1],
-			[startx + width1 - tube_width, bottom_starty + tube_ht2 + ht1],
-			[startx + width1 - tube_width, bottom_starty+ht1],
+		lowerRod = [
+			[plateStartX + rodWidth, bottomPlateStartY+plateHeight],
+			[plateStartX + rodWidth, bottomPlateStartY +lowerRodHeight + plateHeight],
+			[plateStartX + plateWidth - rodWidth, bottomPlateStartY + lowerRodHeight + plateHeight],
+			[plateStartX + plateWidth - rodWidth, bottomPlateStartY+plateHeight],
 		];
 
 		box = [
-			[startx + width1-box_width, box_starty],
-			[startx + box_width, box_starty],
-			[startx + box_width, bottom_starty],
-			[startx + width1-box_width, bottom_starty],
+			[plateStartX + plateWidth-boxWidth, boxStarty],
+			[plateStartX + boxWidth, boxStarty],
+			[plateStartX + boxWidth, bottomPlateStartY],
+			[plateStartX + plateWidth-boxWidth, bottomPlateStartY],
 		];
 
-		box_part1 = [
-			[startx + width1-box_width - gap/2, box_starty],
-			[startx + width1-box_width + break_length, box_starty],
-			[startx + box_width - break_length, bottom_starty],
-			[startx + width1-box_width - gap/2, bottom_starty],
+		brokenBoxPart1 = [
+			[plateStartX + plateWidth-boxWidth - gap/2, boxStarty],
+			[plateStartX + plateWidth-boxWidth + breakLength, boxStarty],
+			[plateStartX + boxWidth - breakLength, bottomPlateStartY],
+			[plateStartX + plateWidth-boxWidth - gap/2, bottomPlateStartY],
 		];
 
-		box_part2 = [
-			[startx + width1-box_width + break_length + gap, box_starty],
-			[startx + box_width +gap/2, box_starty],
-			[startx + box_width + gap/2, bottom_starty],
-			[startx + box_width - break_length + gap, bottom_starty],
+		brokenBoxPart2 = [
+			[plateStartX + plateWidth-boxWidth + breakLength + gap, boxStarty],
+			[plateStartX + boxWidth +gap/2, boxStarty],
+			[plateStartX + boxWidth + gap/2, bottomPlateStartY],
+			[plateStartX + boxWidth - breakLength + gap, bottomPlateStartY],
 		];
+
+		bench = [
+			[0, canvas.height-benchHeight],
+			[canvas.width, canvas.height-benchHeight],
+			[canvas.width, canvas.height],
+			[0, canvas.height],
+		]
+
+		step=0;
+		coordinates = [];
+
+		document.getElementById("stress").innerHTML = "0.0 Mpa";
+		document.getElementById("strain").innerHTML = "0.0";
+		document.getElementById("load").innerHTML = "0.0 N";
+		document.getElementById("deformation").innerHTML = "0.0 mm";
 	}
 	function restart() 
 	{ 
 		window.clearTimeout(tmHandle); 
-		window.clearTimeout(id);
-		setall();
-		chart.destroy();
-		tmHandle = window.setTimeout(draw, 1000 / fps); 
+		setAll();
+		graph();
+		play();
 	}
 
-	function drawobj(ctx, obj ,color)
+	function play()
+	{
+		tmHandle = window.setTimeout(draw, 1000 / fps);
+		pauseButton.removeAttribute("disabled");
+		restartButton.removeAttribute("disabled");
+		playButton.setAttribute("disabled","true");
+	}
+
+	function pause()
+	{
+		window.clearTimeout(tmHandle);
+		pauseButton.setAttribute("disabled","true");
+		playButton.removeAttribute("disabled");
+	}
+
+	function drawObject(ctx, obj ,color)
 	{
 		ctx.save();
 		ctx.fillStyle = color;
@@ -103,14 +137,19 @@ document.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 
-	let top = [];
-	let bottom = [];
-	let tube1 = [];
-	let tube2 = [];
-	let id;
+	let upperPlate = [];
+	let bottomPlate = [];
+	let upperRod = [];
+	let lowerRod = [];
 	let box = [];
-	let box_part1 = [];
-	let box_part2 = [];
+	let brokenBoxPart1 = [];
+	let brokenBoxPart2 = [];
+	let bench = [];
+	let tmHandle;
+	let coordinates = [];
+	let chart;
+	let step=0;
+
 
 
 	const canvas = document.getElementById("main");
@@ -119,59 +158,84 @@ document.addEventListener('DOMContentLoaded', function(){
 	canvas.style = "border:3px solid;";
 	const ctx = canvas.getContext("2d");
 
-	const fill = "#A9A9A9";
+	const fill = "black";
 	const lineWidth = 1.5;
 	const fps = 20;
 
 	
-	const startx = 250;
-	const width1 = 400;
-	const starty = 340;
-	const bottom_starty = 700;
-	const ht1 = 120;
-	const tube_width = 240;
-	const tube_ht1 = 180;
-	const tube_ht2 = 360;
-	const box_width = 320;
-	const box_starty = 500;
-	const break_length = 80;
+	const plateStartX = 250;
+	const plateWidth = 400;
+	const upperPlateStartY = 340;
+	const bottomPlateStartY = 700;
+	const plateHeight = 120;
+	const rodWidth = 240;
+	const upperRodHeight = 300;
+	const lowerRodHeight = 360;
+	const boxWidth = 320;
+	const boxStarty = 500;
+	const breakLength = 80;
 	const gap = 10;
-	
-	setall();
+	const benchHeight = 100;
 
-	function drawstatic()
+	const boxColor = "#2C9AD1"; // virtual labs color
+	const plateColor = "#176696"; // 
+	const rodColor = "grey";
+	const benchColor = "#643D01";
+
+	
+	setAll();
+	drawStatic();
+	graph();
+
+	function drawStatic()
 	{
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.fillStyle = fill;
 		ctx.lineWidth = lineWidth;
 		ctx.lineCap = "round";
 		ctx.lineJoin = "round";
+		ctx.font = "50px Arial";
 
-		drawobj(ctx,top, "red");
-		drawobj(ctx,bottom, "red");
-		drawobj(ctx,tube1, "grey");
-		drawobj(ctx,tube2, "grey");
+		ctx.fillText("UTM Machine",20,100);
+		ctx.fillText("Load",620,upperPlate[1][1]-110);
+		ctx.lineWidth = 5;
+		ctx.beginPath();
+		ctx.moveTo(600,upperPlate[1][1]-150);
+		ctx.lineTo(600,upperPlate[1][1]-50);
+		ctx.lineTo(580,upperPlate[1][1]-70);
+		ctx.moveTo(600,upperPlate[1][1]-50);
+		ctx.lineTo(620,upperPlate[1][1]-70);
+		ctx.stroke();
+		drawObject(ctx,upperPlate, plateColor);
+		drawObject(ctx,bottomPlate, plateColor);
+		drawObject(ctx,upperRod, rodColor);
+		drawObject(ctx,lowerRod, rodColor);
+		drawObject(ctx,bench, benchColor);
 	}
 	function draw()
 	{
-		drawstatic();
-		drawobj(ctx,box,"black");
-		move(tube1 , 1);
-		move(top,1);
-		if(top[0][1] + ht1 < box_starty)
-			tmHandle = window.setTimeout(draw, 1000 / fps);
+		if(upperPlate[0][1] + plateHeight < boxStarty)
+		{
+			drawStatic();
+			drawObject(ctx,box,boxColor);
+			move(upperRod , 1);
+			move(upperPlate,1);
+			tmHandle = 	window.setTimeout(draw, 1000 / fps);
+		}	
 		else
 		{
-			graph();
-		}	
+			updateChart();
 			
+		}	
+		
 	}
-	let chart;
-	let tmHandle = window.setTimeout(draw, 1000 / fps);
-	
-	function graph() 
+
+	function graph()
 	{
-		let dps = []; 
+		coordinates.push({
+			x : 0,
+			y : 0
+		})
 		chart = new CanvasJS.Chart("chartContainer", 
 		{
 			title :{
@@ -187,41 +251,43 @@ document.addEventListener('DOMContentLoaded', function(){
 			},      
 			data: [{
 				type: "line",
-				dataPoints: dps
+				dataPoints: coordinates
 			}]
 		});
-		let j=0;
-		let xVal = 0;
-		let yVal = 0; 
-		let updateChart = function () 
-		{
-			xVal = charts[j].xx;            
-			yVal = charts[j].yy;        
-			dps.push({
-						x: xVal,
-						y: yVal
-				});
-			
-	
-			if (dps.length > 100)
-				dps.shift();
-			document.getElementById("stress").innerHTML = stress[j].toString() + " Mpa";
-			document.getElementById("strain").innerHTML = strain[j].toString();
-			document.getElementById("load").innerHTML = load[j].toString() + " N";
-			document.getElementById("deformation").innerHTML = deformation[j].toString() + " mm";
-			if(j<stress.length)
-			{
-				chart.render();
-				j++;
-				id = window.setTimeout(updateChart, 5000 / fps);
-			}
-			if(j == stress.length)
-			{
-				drawstatic();
-				drawobj(ctx,box_part1, "black");
-				drawobj(ctx,box_part2, "black");
-			}
-		};		
-		let id = window.setTimeout(updateChart, 5000 / fps);
 	}
-})
+
+
+	
+	function updateChart()
+	{
+		
+		let xVal = strain[step];            
+		let yVal = stress[step];        
+		coordinates.push({
+					x: xVal,
+					y: yVal
+			});
+		if (coordinates.length > 100)
+			coordinates.shift();
+		document.getElementById("stress").innerHTML = stress[step].toString() + " Mpa";
+		document.getElementById("strain").innerHTML = strain[step].toString();
+		document.getElementById("load").innerHTML = load[step].toString() + " N";
+		document.getElementById("deformation").innerHTML = deformation[step].toString() + " mm";
+		if(step<load.length)
+		{
+			chart.render();
+			step++;
+		}
+		if(step == load.length)
+		{
+			drawStatic();
+			drawObject(ctx,brokenBoxPart1, boxColor);
+			drawObject(ctx,brokenBoxPart2, boxColor);
+			window.clearTimeout(tmHandle);
+		}
+		else
+		{
+			tmHandle = 	window.setTimeout(draw, 5000 / fps);
+		}
+	}
+});
