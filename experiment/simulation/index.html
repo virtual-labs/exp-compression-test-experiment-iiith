@@ -4,48 +4,63 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.5-b/css/style.min.css"/>
 		<link rel="stylesheet" href="./css/main.css">
 	</head>
 
 		<div class="columns is-centered">
 			<div class="column has-text-centered mt-2">
-				<button id="restart" class="action-button">Restart</button>
+				<button id="play" class="v-button">Play</button>
+				<button id="pause" class="v-button" disabled>Pause</button>
+				<button id="restart" class="v-button"disabled>Restart</button>
 			</div>
 		</div>
 
-		<div class="columns is-centered">
-			<div class="column has-text-centered is-two-fifths">
-				<div class="hero is-small">
-					<div class="hero-body">
-						<canvas class="main" id="main"></canvas>
-					</div>
+		<div class = "box">
+			<div class="columns is-centered">
+				<div class="column has-text-centered is-two-fifths">
+					<canvas class="main v-canvas-container" id="main"></canvas>
 				</div>
-			</div>
-			<div class="column has-text-centered">
-				<div class = "columns box mt-3" >
-					<div class="column">
-						<span class="tag is-primary is-light">Length :</span>
-						<span id="length">49.5 mm</span><br><br>
-						<span class="tag is-primary is-light">Area :</span>
-						<span id="area"> 2499.75 mm<sup>2</sup></span> 
+				<div class="column has-text-centered">
+					<div class ="v-table-wrap">
+						<table class="table is-bordered is-fullwidth v-table-primary mb-2">
+							<thead>
+							<tr>
+								<th>Length</th>
+								<th>Area</th>
+								<th>Height</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td id = "length">49.5 mm</td>
+								<td id = "area">2499.75 mm<sup>2</sup></td>
+								<td id = "height">50.5 mm</td>
+							</tr>
+							</tbody>
+						</table>
 					</div>
-					<div class="column">
-						<span class="tag is-primary is-light">Stress :</span>
-						<span id = "stress">0.0 Mpa</span><br><br>
-						<span class="tag is-primary is-light">%Strain :</span>
-						<span id="strain">0.0 Mpa</span><br><br>
-						<span class="tag is-primary is-light">Deformation :</span>
-						<span id="deformation">0.0 mm</span>
+					<div class ="v-table-wrap">
+						<table class="table is-bordered is-fullwidth v-table-primary mb-2">
+							<thead>
+							<tr>
+								<th>Stress</th>
+								<th>Strain</th>
+								<th>Deformation</th>
+								<th>Load</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td id = "stress">0.0 Mpa</td>
+								<td id = "strain">0.0</td>
+								<td id = "deformation">0.0 mm</td>
+								<td id = "load">0.0 N</td>
+							</tr>
+							</tbody>
+						</table>
 					</div>
-					<div class="column">
-						<span class="tag is-primary is-light">Load :</span>
-						<span id = "load">0.0 N</span><br><br>
-						<span class="tag is-primary is-light">Height :</span>
-						<span id = "height">50.5 mm</span> 
-					</div>
-				</div>
-				<div>
-					<div class="hero is-small">
+					<div>
 						<div id="chartContainer"></div>
 					</div>
 				</div>
