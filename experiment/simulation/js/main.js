@@ -18,6 +18,16 @@ document.addEventListener('DOMContentLoaded', function(){
 	const pauseButton = document.getElementById('pause');
 	pauseButton.addEventListener('click',function(){pause();});
 
+	const slider = document.getElementById('speed');
+	const output = document.getElementById('demo_speed');
+	output.innerHTML = (slider.value)/4;
+	slider.oninput = function() {
+		output.innerHTML = (this.value)/4;
+		fps = originalfps*(output.innerHTML);
+		console.log(fps);
+		restart();
+	};
+
 	function setAll()
 	{
 		upperPlate = [
@@ -160,7 +170,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	const fill = "black";
 	const lineWidth = 1.5;
-	const fps = 20;
+	const originalfps = 20;
+	let fps = 20;
 
 	
 	const plateStartX = 250;
@@ -278,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			chart.render();
 			step++;
 		}
-		if(step == load.length)
+		if(step === load.length)
 		{
 			drawStatic();
 			drawObject(ctx,brokenBoxPart1, boxColor);
