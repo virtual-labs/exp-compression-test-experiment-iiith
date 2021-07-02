@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	slider.oninput = function () {
 		output.innerHTML = (this.value) / 4;
 		fps = originalfps * (output.innerHTML);
-		console.log(fps);
 		restart();
 	};
 
