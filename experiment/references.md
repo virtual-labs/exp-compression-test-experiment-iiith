@@ -1,1 +1,2 @@
-- https://en.wikipedia.org/wiki/Compressive_strength
+- Engineering Mechanics of Solids, 2nd Edition
+  Egor P. Popov
