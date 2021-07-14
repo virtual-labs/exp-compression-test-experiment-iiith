@@ -167,19 +167,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const bottomPlateStartY = 700;
     const plateHeight = 120;
     const rodWidth = 240;
-    const upperRodHeight = 300;
+    const upperRodHeight = 240;
     const lowerRodHeight = 360;
     const boxWidth = 320;
     const boxStarty = 500;
     const breakLength = 80;
     const gap = 10;
     const benchHeight = 100;
-
-    const boxColor = "#2C9AD1"; // virtual labs color
-    const plateColor = "#176696"; // 
-    const rodColor = "grey";
-    const benchColor = "#643D01";
-
 
     setAll();
     drawStatic();
@@ -193,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.lineJoin = "round";
         ctx.font = "50px Arial";
 
-        ctx.fillText("UTM Machine", 20, 100);
+        ctx.fillText("UTM Machine", 300, 70);
         ctx.fillText("Load", 620, upperPlate[1][1] - 110);
         ctx.lineWidth = 5;
         ctx.beginPath();
@@ -203,17 +197,17 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.moveTo(600, upperPlate[1][1] - 50);
         ctx.lineTo(620, upperPlate[1][1] - 70);
         ctx.stroke();
-        drawObject(ctx, upperPlate, plateColor);
-        drawObject(ctx, bottomPlate, plateColor);
-        drawObject(ctx, upperRod, rodColor);
-        drawObject(ctx, lowerRod, rodColor);
-        drawObject(ctx, bench, benchColor);
+        drawObject(ctx, upperPlate, data.colors.plate);
+        drawObject(ctx, bottomPlate, data.colors.plate);
+        drawObject(ctx, upperRod, data.colors.rod);
+        drawObject(ctx, lowerRod, data.colors.rod);
+        drawObject(ctx, bench, data.colors.bench);
     }
 
     function draw() {
         if (upperPlate[0][1] + plateHeight < boxStarty) {
             drawStatic();
-            drawObject(ctx, box, boxColor);
+            drawObject(ctx, box, data.colors.box);
             move(upperRod, 1);
             move(upperPlate, 1);
             tmHandle = window.setTimeout(draw, 1000 / fps);
@@ -241,8 +235,8 @@ document.addEventListener('DOMContentLoaded', function() {
             xaxis: {
                 title: "%Strain"
             }
-        }
-        Plotly.newPlot(chartContainer, chart, layout)
+        };
+        Plotly.newPlot(chartContainer, chart, layout);
     }
 
     function updateChart() {
@@ -262,8 +256,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (step === load.length) {
             drawStatic();
-            drawObject(ctx, brokenBoxPart1, boxColor);
-            drawObject(ctx, brokenBoxPart2, boxColor);
+            drawObject(ctx, brokenBoxPart1, data.colors.box);
+            drawObject(ctx, brokenBoxPart2, data.colors.box);
             window.clearTimeout(tmHandle);
         } else {
             tmHandle = window.setTimeout(draw, 5000 / fps);
