@@ -154,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function() {
     canvas.height = 1200;
     canvas.style = "border:3px solid;";
     const ctx = canvas.getContext("2d");
-
     const lineWidth = 1.5;
     const originalfps = 20;
     let fps = 20;
@@ -233,7 +232,6 @@ document.addEventListener('DOMContentLoaded', function() {
             xaxis: {
                 title: "%Strain"
             }
-
         };
         Plotly.newPlot(chartContainer, chart, layout);
     }
