@@ -155,7 +155,6 @@ document.addEventListener('DOMContentLoaded', function() {
     canvas.style = "border:3px solid;";
     const ctx = canvas.getContext("2d");
 
-    const fill = "black";
     const lineWidth = 1.5;
     const originalfps = 20;
     let fps = 20;
@@ -181,7 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function drawStatic() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = fill;
         ctx.lineWidth = lineWidth;
         ctx.lineCap = "round";
         ctx.lineJoin = "round";
