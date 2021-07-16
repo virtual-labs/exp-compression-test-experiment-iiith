@@ -258,6 +258,8 @@ document.addEventListener('DOMContentLoaded', function() {
             drawStatic();
             drawObject(ctx, brokenBoxPart1, data.colors.box);
             drawObject(ctx, brokenBoxPart2, data.colors.box);
+            playButton.setAttribute("disabled", "true");
+            pauseButton.setAttribute("disabled", "true");
             window.clearTimeout(tmHandle);
         } else {
             tmHandle = window.setTimeout(draw, 5000 / fps);
