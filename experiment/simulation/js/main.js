@@ -235,6 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
             xaxis: {
                 title: "%Strain"
             }
+
         };
         Plotly.newPlot(chartContainer, chart, layout);
     }
