@@ -2,7 +2,3 @@
 
 **Compressive Strength :-** It is the maximum compressive stress that a material is capable of withstanding without fracture. Brittle materials fracture during testing and have a definite compressive strength values. The compressive strength of ductile materials is determined by their degree of distortion during testing.
 
-**Objectives:**
-
- To determine the compressive strength of given sample. 
-
