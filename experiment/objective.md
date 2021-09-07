@@ -1,0 +1,1 @@
+- To determine the compressive strength of given sample. 
