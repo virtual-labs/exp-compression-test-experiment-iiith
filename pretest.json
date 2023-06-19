@@ -1,0 +1,40 @@
+{
+    "version": 2.0,
+    "questions": [{
+            "question": "1. Compressive test is generally perfomed on brittle materials rather than ductile materials.",
+            "answers": {
+                "a": "True",
+                "b": "False"
+            },
+            "explanations": {
+                "a": "Generally brittle materials are weak in tension but strong in compression.But there is no general rule that a compressive test is performed on brittle materials only.",
+                "b": "Correct Answer"
+            },
+            "correctAnswer": "b",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. What is/are the shape(s) of the specimen used in the compression test?",
+            "answers": {
+                "a": "Cube",
+                "b": "Cylinder",
+                "c": "Both",
+                "d": "None"
+            },
+            "correctAnswer": "c",
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "3. During compression test of cast iron, the failure occurs i.e. the crack appears along the _____________",
+            "answers": {
+                "a": "Diagonal",
+                "b": "Surface parallel to load applied",
+                "c": "Surface perpendicular to load applied",
+                "d": "Lateral"
+            },
+            "correctAnswer": "a",
+            "difficulty": "advanced"
+        }
+
+    ]
+}
