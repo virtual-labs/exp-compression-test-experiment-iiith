@@ -1,4 +1,5 @@
- A compression test is a method for determining the behavior of materials under a compressive load. Compression tests are conducted by loading the test specimen between two plates and then applying a force to the specimen by moving the crossheads together. The compression test is used to determine elastic limit, proportionality limit, yield point, yield strength and compressive strength.
+The aim of this experiment is to study the behaviour of a material under compressive loading and determine its compressive strength using a compression testing machine.
 
-**Compressive Strength :-** It is the maximum compressive stress that a material is capable of withstanding without fracture. Brittle materials fracture during testing and have a definite compressive strength values. The compressive strength of ductile materials is determined by their degree of distortion during testing.
+The test helps in understanding how materials deform and resist forces that tend to shorten or crush them. By gradually applying a compressive load to a standard specimen, important properties such as proportional limit, elastic limit, yield strength, and compressive strength can be determined.
 
+Compression testing is particularly useful for materials such as cast iron, concrete, stone, brick, and other materials that are commonly subjected to compressive forces in engineering applications.
