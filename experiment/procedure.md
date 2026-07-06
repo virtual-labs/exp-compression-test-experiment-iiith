@@ -1,21 +1,23 @@
- 
-**Procedure**
+### Procedure
 
-1. Dimensions of test piece is measured at 3 different places along its height/length to determine the average c/s area.
-2. Ends of the specimen should be plain. For that the ends are tested on a bearing plate.
-3. The specimen is placed centrally between the two compression plates, such that the center of moving head is vertically above the center of specimen.
-4. Load is applied on the specimen by moving the movable head.
-5. The load and the corresponding contraction are measured at different intervals. The load interval may be as 500kg.
-6. Load is applied until the specimen fails.
-7. The values of stress and strain are calculated at several intervals and are plotted on a graph.
-8. The resultant graph is the Stress-Strain curve which is the property of a material and is independent of the dimensions of specimen used. 
+1. Measure the dimensions of the test specimen at three different locations along its height to determine the average cross-sectional area.
+2. Ensure that the ends of the specimen are flat and smooth so that they make proper contact with the compression plates.
+3. Place the specimen centrally between the upper and lower compression plates of the testing machine.
+4. Align the specimen such that the center of the moving head is vertically above the center of the specimen.
+5. Apply the compressive load gradually by moving the movable head of the machine.
+6. Record the applied load and the corresponding deformation at regular intervals.
+7. Continue loading until the specimen fails or undergoes significant deformation.
+8. Calculate the corresponding compressive stress and strain values.
+9. Plot the stress-strain curve using the calculated values and study the compressive behaviour of the material.
 
-**Virtual Procedure**
-1. Start the Experiment by clicking the play button.
-2. Observe the compression of the box in the simulation window.
-3. As the simulation continues the different value of stress, strain and deformation is observed according to the increasing Load.
-4. A Graph is plotted between the stress-strain values observed.
-5. The Experiment allows you to pause/play/restart the simulation to view the values of different parameters at every stage of simulation.
+### Virtual Procedure
 
-NOTE: There are various features available for the graphs such as zoom, etc. The function/feature of each icon above the graphs becomes visible upon hovering over the concerned icon.
+1. Start the experiment by clicking the **Play** button.
+2. Observe the compression of the specimen in the simulation window.
+3. As the simulation progresses, observe the values of load, stress, strain, and deformation.
+4. Note how the specimen deforms with increasing compressive load.
+5. Observe the stress-strain graph generated during the simulation.
+6. Use the displayed values and graph to study the compressive behaviour of the material.
+7. The simulation can be **Paused**, **Played**, or **Restarted** at any stage to observe the parameters more carefully.
 
+**Note:** Various graph features such as zooming and panning are available. Hover over the graph icons to view their functions.
