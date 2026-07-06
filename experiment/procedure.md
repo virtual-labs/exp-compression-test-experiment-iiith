@@ -1,4 +1,4 @@
-**Procedure**
+### Procedure
 
 1. Measure the dimensions of the test specimen at three different locations along its height to determine the average cross-sectional area.
 2. Ensure that the ends of the specimen are flat and smooth so that they make proper contact with the compression plates.
@@ -10,7 +10,7 @@
 8. Calculate the corresponding compressive stress and strain values.
 9. Plot the stress-strain curve using the calculated values and study the compressive behaviour of the material.
 
-**Virtual Procedure**
+### Virtual Procedure
 
 1. Start the experiment by clicking the **Play** button.
 2. Observe the compression of the specimen in the simulation window.
