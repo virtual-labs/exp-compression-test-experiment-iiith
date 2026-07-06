@@ -1,0 +1,154 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Compression testing is primarily used to study the behaviour of a material under ________.",
+      "answers": {
+        "a": "Tensile load",
+        "b": "Compressive load",
+        "c": "Impact load",
+        "d": "Torsional load"
+      },
+      "explanations": {
+        "a": "Incorrect. Tensile loading is studied using a tensile test.",
+        "b": "Correct. A compression test evaluates the behaviour of a material subjected to compressive loading.",
+        "c": "Incorrect. Impact loading is studied using impact testing.",
+        "d": "Incorrect. Torsional loading is studied using torsion testing."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Compression tests are commonly performed on brittle materials such as concrete and cast iron.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "Correct. Brittle materials are generally strong in compression and are frequently evaluated using compression tests.",
+        "b": "Incorrect. Compression testing is commonly used to evaluate brittle materials."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which of the following is a common engineering member subjected primarily to compression?",
+      "answers": {
+        "a": "Tie rod",
+        "b": "Cable",
+        "c": "Column",
+        "d": "Chain"
+      },
+      "explanations": {
+        "a": "Incorrect. Tie rods primarily carry tensile loads.",
+        "b": "Incorrect. Cables are designed to resist tension.",
+        "c": "Correct. Columns are structural members that primarily resist compressive loads.",
+        "d": "Incorrect. Chains are intended to carry tensile forces."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which specimen shape is commonly used in compression testing?",
+      "answers": {
+        "a": "Cube only",
+        "b": "Cylinder only",
+        "c": "Prism only",
+        "d": "Both cube and cylinder"
+      },
+      "explanations": {
+        "a": "Incorrect. Cylindrical specimens are also commonly used.",
+        "b": "Incorrect. Cubical specimens are also widely used.",
+        "c": "Incorrect. Prismatic specimens are not the most common standard shapes.",
+        "d": "Correct. Both cube and cylindrical specimens are commonly used in compression testing."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Compressive stress is calculated as:",
+      "answers": {
+        "a": "Load × Area",
+        "b": "Load / Area",
+        "c": "Area / Load",
+        "d": "Load × Length"
+      },
+      "explanations": {
+        "a": "Incorrect. Multiplying load and area does not give stress.",
+        "b": "Correct. Compressive stress is the applied load divided by the original cross-sectional area.",
+        "c": "Incorrect. This does not represent stress.",
+        "d": "Incorrect. Length is not part of the stress formula."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. During a compression test, the specimen generally ________.",
+      "answers": {
+        "a": "Elongates",
+        "b": "Twists",
+        "c": "Shortens",
+        "d": "Melts"
+      },
+      "explanations": {
+        "a": "Incorrect. Elongation occurs during tensile loading.",
+        "b": "Incorrect. Twisting is associated with torsion.",
+        "c": "Correct. Compression causes the specimen to shorten in the direction of loading.",
+        "d": "Incorrect. Melting is unrelated to compression testing."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. During compression testing of cast iron, failure typically occurs along a:",
+      "answers": {
+        "a": "Vertical plane",
+        "b": "Horizontal plane",
+        "c": "Diagonal plane",
+        "d": "Circular plane"
+      },
+      "explanations": {
+        "a": "Incorrect. This is not the typical failure pattern in cast iron compression tests.",
+        "b": "Incorrect. Brittle compression failure usually does not occur on a horizontal plane.",
+        "c": "Correct. Cast iron commonly develops cracks along an inclined or diagonal plane under compression.",
+        "d": "Incorrect. Circular failure planes are not characteristic of cast iron compression failure."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. The compressive strength of a material is:",
+      "answers": {
+        "a": "The minimum compressive stress experienced",
+        "b": "The average compressive stress during testing",
+        "c": "The stress at the proportional limit",
+        "d": "The maximum compressive stress sustained before failure"
+      },
+      "explanations": {
+        "a": "Incorrect. Compressive strength is not based on the minimum stress.",
+        "b": "Incorrect. Average stress does not define compressive strength.",
+        "c": "Incorrect. The proportional limit occurs before failure.",
+        "d": "Correct. Compressive strength is the maximum compressive stress a material can withstand before failure."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which material generally exhibits large plastic deformation before failure in compression?",
+      "answers": {
+        "a": "Cast iron",
+        "b": "Concrete",
+        "c": "Mild steel",
+        "d": "Brick"
+      },
+      "explanations": {
+        "a": "Incorrect. Cast iron is relatively brittle.",
+        "b": "Incorrect. Concrete is a brittle material.",
+        "c": "Correct. Mild steel is ductile and undergoes significant plastic deformation under compression.",
+        "d": "Incorrect. Brick behaves as a brittle material."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    }
+  ]
+}

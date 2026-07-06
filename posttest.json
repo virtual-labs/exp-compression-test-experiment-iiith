@@ -1,0 +1,154 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. The ends of a compression test specimen should be flat and smooth.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "Correct. Flat and smooth ends ensure uniform distribution of compressive load.",
+        "b": "Incorrect. Uneven ends can cause improper loading and inaccurate results."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. During compression testing, the specimen is placed between:",
+      "answers": {
+        "a": "Two grips",
+        "b": "Two compression plates",
+        "c": "Two rollers",
+        "d": "Two bearings"
+      },
+      "explanations": {
+        "a": "Incorrect. Grips are generally used in tensile testing.",
+        "b": "Correct. Compression testing is performed between compression platens or plates.",
+        "c": "Incorrect. Rollers are not used for standard compression testing.",
+        "d": "Incorrect. Bearings are not the primary loading elements."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which graph is typically plotted using the observations from a compression test?",
+      "answers": {
+        "a": "Load vs Time",
+        "b": "Stress vs Temperature",
+        "c": "Stress vs Strain",
+        "d": "Load vs Density"
+      },
+      "explanations": {
+        "a": "Incorrect. This graph is not commonly used for evaluating material behaviour.",
+        "b": "Incorrect. Temperature is not the primary variable in this test.",
+        "c": "Correct. A stress-strain curve is used to study material behaviour under compression.",
+        "d": "Incorrect. Density is not determined from the compression test."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. A specimen carries a compressive load of 100 kN. If its original cross-sectional area is 500 mm², the compressive stress is:",
+      "answers": {
+        "a": "100 N/mm²",
+        "b": "150 N/mm²",
+        "c": "200 N/mm²",
+        "d": "250 N/mm²"
+      },
+      "explanations": {
+        "a": "Incorrect. The calculation is not correct.",
+        "b": "Incorrect. The computed stress is different.",
+        "c": "Correct. Stress = 100000 / 500 = 200 N/mm².",
+        "d": "Incorrect. The value is overestimated."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Compressive strain is defined as:",
+      "answers": {
+        "a": "Change in length divided by original length",
+        "b": "Load divided by area",
+        "c": "Area divided by load",
+        "d": "Stress divided by strain"
+      },
+      "explanations": {
+        "a": "Correct. Strain is the ratio of change in length to original length.",
+        "b": "Incorrect. This defines stress.",
+        "c": "Incorrect. This is not a strain expression.",
+        "d": "Incorrect. This represents Young's modulus."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. A mild steel specimen has compressive strength T. Another mild steel specimen of different dimensions is tested under the same conditions. The compressive strength will be:",
+      "answers": {
+        "a": "2T",
+        "b": "T/2",
+        "c": "T",
+        "d": "4T"
+      },
+      "explanations": {
+        "a": "Incorrect. Compressive strength is not directly proportional to specimen dimensions.",
+        "b": "Incorrect. Material strength is not halved by changing dimensions.",
+        "c": "Correct. Compressive strength is a material property and is independent of specimen dimensions.",
+        "d": "Incorrect. Strength does not increase fourfold due to size changes."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "7. Which material is generally stronger in compression than in tension?",
+      "answers": {
+        "a": "Concrete",
+        "b": "Rubber",
+        "c": "Copper",
+        "d": "Aluminium"
+      },
+      "explanations": {
+        "a": "Correct. Concrete exhibits much higher compressive strength than tensile strength.",
+        "b": "Incorrect. Rubber behaves differently and is not characterized this way.",
+        "c": "Incorrect. Copper is ductile and not primarily known for this property.",
+        "d": "Incorrect. Aluminium does not exhibit this behaviour as prominently as concrete."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. In a compression test, ductile materials typically fail by:",
+      "answers": {
+        "a": "Sudden brittle fracture",
+        "b": "Large plastic deformation",
+        "c": "Instant cracking",
+        "d": "No deformation"
+      },
+      "explanations": {
+        "a": "Incorrect. Sudden fracture is characteristic of brittle materials.",
+        "b": "Correct. Ductile materials generally undergo large plastic deformation before failure.",
+        "c": "Incorrect. Instant cracking is associated with brittle materials.",
+        "d": "Incorrect. Compression causes deformation."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. The primary purpose of a compression test is to determine:",
+      "answers": {
+        "a": "Compressive properties of a material",
+        "b": "Electrical conductivity",
+        "c": "Thermal expansion",
+        "d": "Corrosion resistance"
+      },
+      "explanations": {
+        "a": "Correct. Compression testing is used to evaluate compressive behaviour and strength.",
+        "b": "Incorrect. Electrical conductivity is not measured in this test.",
+        "c": "Incorrect. Thermal expansion requires different testing methods.",
+        "d": "Incorrect. Corrosion resistance is not evaluated through compression testing."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}

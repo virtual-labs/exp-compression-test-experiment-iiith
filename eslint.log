@@ -1,0 +1,17 @@
+
+/home/runner/work/exp-compression-test-experiment-iiith/exp-compression-test-experiment-iiith/experiment/simulation/js/main.js
+  197:37  warning  'data' is not defined            no-undef
+  198:38  warning  'data' is not defined            no-undef
+  199:35  warning  'data' is not defined            no-undef
+  200:35  warning  'data' is not defined            no-undef
+  201:32  warning  'data' is not defined            no-undef
+  207:34  warning  'data' is not defined            no-undef
+  236:9   warning  'Plotly' is not defined          no-undef
+  236:24  warning  'chartContainer' is not defined  no-undef
+  251:13  warning  'Plotly' is not defined          no-undef
+  251:27  warning  'chartContainer' is not defined  no-undef
+  256:45  warning  'data' is not defined            no-undef
+  257:45  warning  'data' is not defined            no-undef
+
+✖ 12 problems (0 errors, 12 warnings)
+

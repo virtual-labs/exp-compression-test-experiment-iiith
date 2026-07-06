@@ -1,0 +1,8 @@
+After performing this experiment, the learner will be able to:
+
+- To study the behaviour of a material under compressive loading.
+- To determine the compressive strength of the given specimen.
+- To obtain the load-deformation relationship during compression.
+- To determine the proportional limit and yield strength of the material.
+- To understand the deformation characteristics of ductile and brittle materials under compression.
+- To relate the observed behaviour to practical engineering applications involving compressive loads.

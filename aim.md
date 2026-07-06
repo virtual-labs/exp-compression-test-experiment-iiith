@@ -1,0 +1,1 @@
+To perform a compression test on a standard test specimen using a Universal Testing Machine (UTM) and determine its compressive strength, proportional limit, elastic limit, yield strength (where applicable), and deformation characteristics from the load–deformation relationship.
